@@ -1,8 +1,15 @@
+import { useState } from "react";
 
 function App() {
+  const[counter,setCounter] = useState(0);
+  function add(){
+    setCounter(counter+1);
+  }
 
   return (
-    <h1>Hello World</h1>
+    <div>
+      <button onClick={add}>{counter}</button>
+    </div>
   )
 }
     
